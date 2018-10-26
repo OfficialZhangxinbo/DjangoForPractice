@@ -32,7 +32,7 @@ class CourseComments(models.Model):
         verbose_name_plural = verbose_name
 
 
-class UserFavotite(models.Model):
+class UserFavorite(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name=u"用户")
     fav_id = models.IntegerField(default=0, verbose_name=u"数据id")
     fav_type = models.IntegerField(choices=((1, "课程"),(2, "课程机构"),(3,"教师")),default=1)
